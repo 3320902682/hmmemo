@@ -1,28 +1,33 @@
 <template>
-  <div id="app">
-    <menu-bar></menu-bar>
-  </div>
+  <el-container id="app">
+    <el-header>
+      <menu-bar />
+    </el-header>
+
+    <el-main>
+      <item-list />
+    </el-main>
+  </el-container>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import MenuBar from "./components/MenuBar.vue";
+import ItemList from "./components/ItemList.vue";
 
 @Component({
   components: {
     MenuBar,
-  },
+    ItemList
+  }
 })
 export default class App extends Vue {}
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  box-sizing: border-box;
+  height: 100vh;
+  margin: 0;
 }
 </style>

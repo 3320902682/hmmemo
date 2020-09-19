@@ -1,13 +1,14 @@
-import Vue from 'vue'
-import App from './App.vue'
-import Category from './model/CateEnum'
-import ItemData from './model/ItemData'
+import Vue from "vue";
+import App from "./App.vue";
+import store from "./store/index";
+import ElementUI from "element-ui";
+import "element-ui/lib/theme-chalk/index.css";
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
+
+Vue.use(ElementUI);
 
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
-
-let item1 = new ItemData(1, Category.Study, '来一起学TypeScript吧', '大家一起快乐的学习把~~');
-console.log(item1);
+  render: (h) => h(App),
+  store
+}).$mount("#app");

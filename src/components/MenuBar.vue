@@ -1,5 +1,5 @@
 <template>
-  <div>MenuBar</div>
+  <div id="idd">MenuBar</div>
 </template>
 
 <script lang="ts">
